@@ -17,6 +17,7 @@ from discord import (
 from discord.ui import Select, Button, View, UserSelect
 from discord.ext import commands
 from typing import List
+import logging
 
 
 # Configure logger settings
@@ -64,9 +65,13 @@ async def list(interaction: discord.Interaction):
 async def on_message(message):
     # 自分のメッセージを無効
     if message.author == client.user:
+        print(message.content)
+        print(discord.__version__)
         return
 
-    if message.content.startswith("/hello"):
+    if message.content.startswith("$hello"):
+        print(message.content)
+        print(discord.__version__)
         await message.channel.send("hello world")
 
 
