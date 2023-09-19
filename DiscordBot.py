@@ -54,9 +54,15 @@ async def on_ready():
 
 
 # slash commandを受信した時に呼ばれる
-@tree.command(name="hello", description="hello world")
+@tree.command(name="hello1", description="hello world")
 async def list(interaction: discord.Interaction):
     message = "hello world"
+    await interaction.response.send_message(message, ephemeral=False)
+
+
+@tree.command(name="call", description="ぴぴちゃん")
+async def list(interaction: discord.Interaction):
+    message = "🐤ぴぴっ！！！！"
     await interaction.response.send_message(message, ephemeral=False)
 
 

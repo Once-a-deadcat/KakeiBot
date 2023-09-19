@@ -8,6 +8,7 @@ name = "pypi"
 azure-storage-blob = "*"
 azure-identity = "*"
 azure-data-tables = "*"
+sqlalchemy = "*"
 
 [dev-packages]
 
