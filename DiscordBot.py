@@ -60,11 +60,15 @@ async def list(interaction: discord.Interaction):
     await interaction.response.send_message(message, ephemeral=False)
 
 
-@tree.command(name="call", description="ぴぴちゃん")
+@tree.command(name="call1", description="ぴぴちゃん")
 async def list(interaction: discord.Interaction):
     message = "🐤ぴぴっ！！！！"
     await interaction.response.send_message(message, ephemeral=False)
 
+@tree.command(name="row1", description="はなちゃん")
+async def list(interaction: discord.Interaction):
+    message = "ﾊﾅﾁｬﾝ！"
+    await interaction.response.send_message(message, ephemeral=False)
 
 # メッセージを受信した時に呼ばれる
 @client.event
